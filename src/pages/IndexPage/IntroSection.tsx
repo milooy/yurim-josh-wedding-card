@@ -2,8 +2,8 @@ import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import Image from 'next/image';
-import avatarImage from 'public/avatar1.png';
 import { BorderedTable } from 'src/components/Table';
+import avatarImage from 'public/avatar1.png';
 
 const IntroSection = () => {
   return (
