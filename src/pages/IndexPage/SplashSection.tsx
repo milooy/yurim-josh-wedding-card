@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const SplashSection = () => {
   return (
-    <div style={{ height: "100vh", color: "white" }}>
+    <div style={{ height: '100vh', color: 'white' }}>
       <JejuVideo />
       <FlexContainer>
         <MainHeading>유림, 기효 결혼해요!</MainHeading>
@@ -11,7 +11,7 @@ const SplashSection = () => {
           <p>2022년 9월 17일 토요일 낮 12시</p>
           <p>네이버 1784사옥</p>
         </div>
-        <HorizontalLine style={{ marginTop: "5vh" }} />
+        <HorizontalLine style={{ marginTop: '5vh' }} />
       </FlexContainer>
     </div>
   );
@@ -43,14 +43,14 @@ const JejuVideo = () => {
       muted
       autoPlay
       style={{
-        width: "100vw",
-        height: "100vh",
-        objectFit: "cover",
-        position: "absolute",
+        width: '100vw',
+        height: '100vh',
+        objectFit: 'cover',
+        position: 'absolute',
         zIndex: -1,
       }}
     >
-      <source src={"/jejuVideo.mp4"} />
+      <source src={'/jejuVideo.mp4'} />
     </video>
   );
 };

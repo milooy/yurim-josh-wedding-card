@@ -1,6 +1,6 @@
-import React from "react";
-import { COLORS } from "src/assets/theme";
-import Section from "src/components/Section";
+import React from 'react';
+import { COLORS } from 'src/assets/theme';
+import Section from 'src/components/Section';
 
 const TimelineSection = () => {
   return (

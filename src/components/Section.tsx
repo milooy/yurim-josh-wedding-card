@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Section = ({
   backgroundColor,
@@ -10,9 +10,9 @@ const Section = ({
   children: React.ReactNode;
 }) => {
   return (
-    <section style={{ background: backgroundColor, padding: "24px 16px" }}>
+    <section style={{ background: backgroundColor, padding: '24px 16px' }}>
       {title !== undefined && (
-        <h2 style={{ marginBottom: "0.5rem" }}>{title}</h2>
+        <h2 style={{ marginBottom: '0.5rem' }}>{title}</h2>
       )}
       {children}
     </section>
