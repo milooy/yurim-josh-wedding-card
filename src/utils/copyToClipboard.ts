@@ -16,13 +16,15 @@ function fallbackCopyTextToClipboard(text: string) {
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Fallback: Copying text command was ' + msg);
   } catch (err) {
+    alert(err);
     console.error('Fallback: Oops, unable to copy', err);
   }
 
   document.body.removeChild(textArea);
 }
 function copyTextToClipboard(text: string, onSuccess: (text: string) => void) {
-  if (!navigator.clipboard) {
+  if (!navigator.clipboard || /kakaotalk/.test(navigator.userAgent)) {
+    alert('카카오톡은 여기로');
     fallbackCopyTextToClipboard(text);
     return;
   }
@@ -31,6 +33,7 @@ function copyTextToClipboard(text: string, onSuccess: (text: string) => void) {
       onSuccess(text);
     },
     function (err) {
+      alert(err);
       console.error('Async: Could not copy text: ', err);
     },
   );
