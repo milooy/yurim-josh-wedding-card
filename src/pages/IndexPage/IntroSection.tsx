@@ -2,7 +2,7 @@ import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import Image from 'next/image';
-import avatarImage from 'public/avatar2.png';
+import avatarImage from 'public/avatar1.png';
 import { BorderedTable } from 'src/components/Table';
 
 const IntroSection = () => {
@@ -10,21 +10,35 @@ const IntroSection = () => {
     <Section backgroundColor={COLORS.highlight1}>
       <WelcomeText />
       <FromInfo />
-      <InfoTable />
-      <AvatarImage />
+      <div style={{ position: 'relative' }}>
+        <AvatarImage />
+        <InfoTable />
+      </div>
     </Section>
   );
 };
 
 const AvatarImage = () => {
   return (
-    <Image
-      src={avatarImage}
-      alt=""
-      sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              50vw"
-    />
+    <div
+      style={{
+        maxWidth: '230px',
+        position: 'absolute',
+        width: '100%',
+        bottom: '-12rem',
+        right: 0,
+      }}
+    >
+      <Image
+        src={avatarImage}
+        alt=""
+        // sizes="(min-width: 75em) 10vw,
+        //         (min-width: 48em) 10vw,
+        //         10vw"
+        // layout="responsive"
+        style={{ transform: 'scaleX(-1)' }}
+      />
+    </div>
   );
 };
 
@@ -48,37 +62,23 @@ const WelcomeText = () => {
         특별한 술을 마련해보았습니다.
       </p>
       <p>와서 편하게 놀다 가셨으면 좋겠습니다.</p>
-
-      <p>
-        귀한 시간 내어 참석해 주실
-        <br />
-        소중한 분들께 미리 감사드립니다
-      </p>
     </div>
-  );
-};
-
-const Map = () => {
-  return (
-    <div
-      id="daumRoughmapContainer1660989833227"
-      className="root_daum_roughmap root_daum_roughmap_landing"
-    ></div>
   );
 };
 
 const FromInfo = () => {
   return (
     <div>
-      <p>장채환, 서순옥 의 장남 기효</p>
-      <p>진경철, 김은숙 의 장녀 유림</p>
+      장채환, 서순옥 의 장남 기효
+      <br />
+      진경철, 김은숙 의 장녀 유림
     </div>
   );
 };
 
 const InfoTable = () => {
   return (
-    <BorderedTable>
+    <BorderedTable style={{ margin: '3rem 0 9rem', position: 'relative' }}>
       <tbody>
         <tr>
           <td>언제</td>
