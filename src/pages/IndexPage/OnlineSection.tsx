@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
 import React from 'react';
 import { COLORS } from 'src/assets/theme';
+import { Button } from 'src/components/Button';
 import Section from 'src/components/Section';
 
 const OnlineSection = () => {
@@ -33,18 +33,11 @@ const OnlineSection = () => {
 };
 
 const YoutubeButton = ({ onClick }: { onClick: () => void }) => {
-  return <Button onClick={onClick}>캡틴판교 유튜브</Button>;
+  return (
+    <Button backgroundColor="#ef0014" onClick={onClick}>
+      캡틴판교 유튜브
+    </Button>
+  );
 };
-
-const Button = styled.button`
-  background: #ef0014;
-  border: 1px solid #000000b5;
-  color: white;
-  width: 100%;
-  max-width: 800px;
-  padding: 20px 13px;
-  border-radius: 6px;
-  font-size: 1rem;
-`;
 
 export default OnlineSection;
