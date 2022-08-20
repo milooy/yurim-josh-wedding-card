@@ -16,6 +16,7 @@ function fallbackCopyTextToClipboard(text: string) {
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Fallback: Copying text command was ' + msg);
   } catch (err) {
+    alert(err);
     console.error('Fallback: Oops, unable to copy', err);
   }
 
@@ -31,6 +32,7 @@ function copyTextToClipboard(text: string, onSuccess: (text: string) => void) {
       onSuccess(text);
     },
     function (err) {
+      alert(err);
       console.error('Async: Could not copy text: ', err);
     },
   );
