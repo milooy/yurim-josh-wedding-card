@@ -20,7 +20,7 @@ const KakaoMap = () => {
     new daum.roughmap.Lander({
       timestamp: '1661004429477',
       key: '2bfna',
-      mapWidth: '640',
+      mapWidth: '380',
       mapHeight: '360',
     }).render();
     rendered.current += 1;
