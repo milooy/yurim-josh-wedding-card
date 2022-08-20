@@ -17,7 +17,7 @@ function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="9월 17일 토요일 12시, 네이버 1784사옥 28층 스카이홀"
         />
-        <meta property="og:image" content="./couple.png" />
+        <meta property="og:image" content="./meta.png" />
         <meta
           property="og:url"
           content="https://yurim-josh-wedding-card.vercel.app/"
