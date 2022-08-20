@@ -10,13 +10,13 @@ const Section = ({
   children: React.ReactNode;
 }) => {
   return (
-    <section style={{ background: backgroundColor, padding: '24px 16px' }}>
-      {title !== undefined && (
-        <h2 style={{ marginBottom: '0.5rem' }}>{title}</h2>
-      )}
+    <section style={{ background: backgroundColor, padding: `${GAP}px 16px` }}>
+      {title !== undefined && <h2 style={{ marginBottom: GAP }}>{title}</h2>}
       {children}
     </section>
   );
 };
+
+const GAP = 28;
 
 export default Section;

@@ -1,6 +1,9 @@
 import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
+import Image from 'next/image';
+import avatarImage from 'public/avatar2.png';
+import { BorderedTable } from 'src/components/Table';
 
 const IntroSection = () => {
   return (
@@ -8,7 +11,20 @@ const IntroSection = () => {
       <WelcomeText />
       <FromInfo />
       <InfoTable />
+      <AvatarImage />
     </Section>
+  );
+};
+
+const AvatarImage = () => {
+  return (
+    <Image
+      src={avatarImage}
+      alt=""
+      sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              50vw"
+    />
   );
 };
 
@@ -62,7 +78,7 @@ const FromInfo = () => {
 
 const InfoTable = () => {
   return (
-    <table>
+    <BorderedTable>
       <tbody>
         <tr>
           <td>언제</td>
@@ -79,7 +95,7 @@ const InfoTable = () => {
           </td>
         </tr>
       </tbody>
-    </table>
+    </BorderedTable>
   );
 };
 
