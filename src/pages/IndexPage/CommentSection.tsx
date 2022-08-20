@@ -7,21 +7,30 @@ import { Comment, createComment, fetchCommentList } from 'utils/firebase';
 const CommentSection = () => {
   return (
     <Section backgroundColor={COLORS.highlight3}>
-      <CommentForm />
-      <CommentList />
+      <Comments />
     </Section>
   );
 };
 
-const CommentForm = () => {
+const Comments = () => {
   const [username, setUsername] = useState('');
   const [contents, setContents] = useState('');
+  const [comments, setComments] = useState<Comment[]>([]);
+
+  useEffect(() => {
+    fetchCommentList().then((commentItems: Comment[]) => {
+      setComments(commentItems);
+    });
+  }, []);
 
   const submitForm = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
     createComment({
       username,
       contents,
+    });
+    fetchCommentList().then((commentItems: Comment[]) => {
+      setComments(commentItems);
     });
     clearForm();
   };
@@ -40,51 +49,40 @@ const CommentForm = () => {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      <div>
-        <label htmlFor="username">이름: </label>
-        <input
-          id="username"
-          type="text"
-          value={username}
-          onChange={handleUsername}
-        />
-      </div>
-      <div>
-        <label htmlFor="contents">내용: </label>
-        <textarea
-          id="contents"
-          cols={30}
-          rows={10}
-          value={contents}
-          onChange={handleContents}
-        ></textarea>
-      </div>
-      <button disabled={username === '' || contents === ''}>작성</button>
-    </form>
-  );
-};
-
-const CommentList = () => {
-  const [comments, setComments] = useState<Comment[]>([]);
-
-  useEffect(() => {
-    fetchCommentList().then((commentItems: Comment[]) => {
-      setComments(commentItems);
-    });
-  }, []);
-
-  return (
-    <ul>
-      {comments &&
-        comments.map((comment, index) => (
-          <li key={index}>
-            <span>{comment.username}</span>
-            <span>{comment.contents}</span>
-            <span>{formatDate(comment.date)}</span>
-          </li>
-        ))}
-    </ul>
+    <>
+      <form onSubmit={submitForm}>
+        <div>
+          <label htmlFor="username">이름: </label>
+          <input
+            id="username"
+            type="text"
+            value={username}
+            onChange={handleUsername}
+          />
+        </div>
+        <div>
+          <label htmlFor="contents">내용: </label>
+          <textarea
+            id="contents"
+            cols={30}
+            rows={10}
+            value={contents}
+            onChange={handleContents}
+          ></textarea>
+        </div>
+        <button disabled={username === '' || contents === ''}>작성</button>
+      </form>
+      <ul>
+        {comments &&
+          comments.map((comment, index) => (
+            <li key={index}>
+              <span>{comment.username}</span>
+              <span>{comment.contents}</span>
+              <span>{formatDate(comment.date)}</span>
+            </li>
+          ))}
+      </ul>
+    </>
   );
 };
 
