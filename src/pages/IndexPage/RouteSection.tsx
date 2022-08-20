@@ -5,6 +5,15 @@ import Section from 'src/components/Section';
 const RouteSection = () => {
   return (
     <Section backgroundColor={COLORS.highlight1} title="오시는 길">
+      <div style={{ marginBottom: 22 }}>
+        <span style={{ fontSize: '1.2rem' }}>
+          네이버 1784사옥 28층 스카이홀
+        </span>
+        <br />
+        <span style={{ fontSize: '0.9rem' }}>
+          경기 성남시 분당구 정자일로 95
+        </span>
+      </div>
       <KakaoMap />
     </Section>
   );
@@ -18,9 +27,8 @@ const KakaoMap = () => {
       return;
     }
     new daum.roughmap.Lander({
-      timestamp: '1661004429477',
-      key: '2bfna',
-      mapWidth: '380',
+      timestamp: '1661008104161',
+      key: '2bfne',
       mapHeight: '360',
     }).render();
     rendered.current += 1;
@@ -28,8 +36,9 @@ const KakaoMap = () => {
 
   return (
     <div
-      id="daumRoughmapContainer1661004429477"
+      id="daumRoughmapContainer1661008104161"
       className="root_daum_roughmap root_daum_roughmap_landing"
+      style={{ width: '100%' }}
     ></div>
   );
 };
