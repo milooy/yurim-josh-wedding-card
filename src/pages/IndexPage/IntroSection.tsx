@@ -40,6 +40,15 @@ const WelcomeText = () => {
   );
 };
 
+const Map = () => {
+  return (
+    <div
+      id="daumRoughmapContainer1660989833227"
+      className="root_daum_roughmap root_daum_roughmap_landing"
+    ></div>
+  );
+};
+
 const FromInfo = () => {
   return (
     <div>
@@ -52,20 +61,22 @@ const FromInfo = () => {
 const InfoTable = () => {
   return (
     <table>
-      <tr>
-        <td>언제</td>
-        <td>
-          2022년 9월 17일 토요일
-          <br />낮 12시
-        </td>
-      </tr>
-      <tr>
-        <td>어디서</td>
-        <td>
-          네이버 1784사옥 27층 스카이홀 <br />
-          경기 성남시 분당구 정자일로 95
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td>언제</td>
+          <td>
+            2022년 9월 17일 토요일
+            <br />낮 12시
+          </td>
+        </tr>
+        <tr>
+          <td>어디서</td>
+          <td>
+            네이버 1784사옥 27층 스카이홀 <br />
+            경기 성남시 분당구 정자일로 95
+          </td>
+        </tr>
+      </tbody>
     </table>
   );
 };

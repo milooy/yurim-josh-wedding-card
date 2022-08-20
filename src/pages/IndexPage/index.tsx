@@ -9,7 +9,7 @@ import TimelineSection from "./TimelineSection";
 const IndexPage = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
 
       <SplashSection />
       <IntroSection />
