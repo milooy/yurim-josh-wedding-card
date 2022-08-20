@@ -1,10 +1,7 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
 
 function App({ Component, pageProps }: AppProps) {
   return (
