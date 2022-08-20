@@ -1,9 +1,10 @@
 import React from "react";
+import { COLORS } from "src/assets/theme";
+import Section from "src/components/Section";
 
 const TimelineSection = () => {
   return (
-    <div>
-      <h2>행사일정</h2>
+    <Section backgroundColor={COLORS.highlight2} title="행사 일정">
       <table>
         <tbody>
           <tr>
@@ -24,7 +25,7 @@ const TimelineSection = () => {
           </tr>
         </tbody>
       </table>
-    </div>
+    </Section>
   );
 };
 

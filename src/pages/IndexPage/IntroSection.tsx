@@ -1,12 +1,14 @@
 import React from "react";
+import { COLORS } from "src/assets/theme";
+import Section from "src/components/Section";
 
 const IntroSection = () => {
   return (
-    <>
+    <Section backgroundColor={COLORS.highlight1}>
       <WelcomeText />
       <FromInfo />
       <InfoTable />
-    </>
+    </Section>
   );
 };
 
