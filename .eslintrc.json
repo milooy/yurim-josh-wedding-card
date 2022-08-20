@@ -1,3 +1,23 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": ["prettier", "unused-imports"],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true,
+        "useTabs": false,
+        "tabWidth": 2,
+        "trailingComma": "all",
+        "printWidth": 80,
+        "bracketSpacing": true,
+        "arrowParens": "avoid"
+      }
+    ]
+  }
 }
