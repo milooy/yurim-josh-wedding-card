@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from 'src/components/Footer';
 import AccountSection from './AccountSection';
+import GallarySection from './GallarySection';
 import GwangjooRouteSection from './GwangjooRouteSection';
 import IntroSection from './IntroSection';
 import OnlineSection from './OnlineSection';
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <RSVPSection />
       <AccountSection />
       <ShareSection />
+      <GallarySection />
 
       <Footer />
     </div>

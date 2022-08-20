@@ -30,7 +30,7 @@ const InfoTable = () => {
         </tr>
         <tr>
           <td>어디서</td>
-          <td>웨딩그룹 위더스 광주</td>
+          <td>웨딩그룹위더스 광주</td>
         </tr>
       </tbody>
     </BorderedTable>
