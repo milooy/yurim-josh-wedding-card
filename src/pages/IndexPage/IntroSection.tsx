@@ -3,7 +3,7 @@ import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import Image from 'next/image';
 import { BorderedTable } from 'src/components/Table';
-import avatarImage from 'public/avatar1.png';
+import avatarImage from 'public/couple.png';
 
 const IntroSection = () => {
   return (
