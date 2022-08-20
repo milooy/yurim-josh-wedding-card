@@ -19,8 +19,10 @@ const Section = ({
         ...style,
       }}
     >
-      {title !== undefined && <h2 style={{ marginBottom: GAP }}>{title}</h2>}
-      {children}
+      <div style={{ maxWidth: 800, margin: '0 auto' }}>
+        {title !== undefined && <h2 style={{ marginBottom: GAP }}>{title}</h2>}
+        {children}
+      </div>
     </section>
   );
 };
