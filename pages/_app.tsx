@@ -24,7 +24,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         {/* twitter open graph */}
         <meta name="twitter:title" content="유림, 기효 결혼해요" />
-        <meta name="twitter:image" content="./couple.png" />
+        <meta name="twitter:image" content="./meta.png" />
         <meta
           name="twitter:url"
           content="https://yurim-josh-wedding-card.vercel.app/"
