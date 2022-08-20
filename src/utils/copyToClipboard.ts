@@ -23,7 +23,8 @@ function fallbackCopyTextToClipboard(text: string) {
   document.body.removeChild(textArea);
 }
 function copyTextToClipboard(text: string, onSuccess: (text: string) => void) {
-  if (!navigator.clipboard) {
+  if (!navigator.clipboard || /kakaotalk/.test(navigator.userAgent)) {
+    alert('카카오톡은 여기로');
     fallbackCopyTextToClipboard(text);
     return;
   }
