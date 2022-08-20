@@ -7,7 +7,6 @@ import IntroSection from './IntroSection';
 import OnlineSection from './OnlineSection';
 import RouteSection from './RouteSection';
 import RSVPSection from './RSVPSection';
-import ShareSection from './ShareSection';
 import SplashSection from './SplashSection';
 import TimelineSection from './TimelineSection';
 
@@ -25,7 +24,7 @@ const IndexPage = () => {
       <OnlineSection />
       <RSVPSection />
       <AccountSection />
-      <ShareSection />
+      {/* <ShareSection /> */}
       <GallarySection />
 
       <Footer />
