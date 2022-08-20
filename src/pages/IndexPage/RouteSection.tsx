@@ -14,16 +14,16 @@ const KakaoMap = () => {
   let rendered = useRef(0);
 
   useEffect(() => {
-    if (rendered.current === 0) {
-      new daum.roughmap.Lander({
-        timestamp: '1661004429477',
-        key: '2bfna',
-        mapWidth: '640',
-        mapHeight: '360',
-      }).render();
-      rendered.current += 1;
+    if (rendered.current !== 0) {
       return;
     }
+    new daum.roughmap.Lander({
+      timestamp: '1661004429477',
+      key: '2bfna',
+      mapWidth: '640',
+      mapHeight: '360',
+    }).render();
+    rendered.current += 1;
   }, []);
 
   return (
