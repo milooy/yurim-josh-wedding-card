@@ -1,4 +1,6 @@
-function fallbackCopyTextToClipboard(text: string) {
+type onSuccess = (text: string) => void;
+
+function fallbackCopyTextToClipboard(text: string, onSuccess: onSuccess) {
   var textArea = document.createElement('textarea');
   textArea.value = text;
 
@@ -15,17 +17,19 @@ function fallbackCopyTextToClipboard(text: string) {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Fallback: Copying text command was ' + msg);
+    onSuccess(text);
   } catch (err) {
     console.error('Fallback: Oops, unable to copy', err);
   }
 
   document.body.removeChild(textArea);
 }
-function copyTextToClipboard(text: string, onSuccess: (text: string) => void) {
-  if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
+function copyTextToClipboard(text: string, onSuccess: onSuccess) {
+  if (!navigator.clipboard || /kakaotalk/gi.test(navigator.userAgent)) {
+    fallbackCopyTextToClipboard(text, onSuccess);
     return;
   }
+
   navigator.clipboard.writeText(text).then(
     function () {
       onSuccess(text);
