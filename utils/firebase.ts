@@ -3,7 +3,7 @@ import { child, get, getDatabase, ref, set } from 'firebase/database';
 import { uuid } from './common';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCQ3p5MRL-sbx2CJbv3Jfm_nkr0dtLV-dE',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: 'fir-51aad.firebaseapp.com',
   databaseURL: 'https://fir-51aad.firebaseio.com',
   projectId: 'fir-51aad',

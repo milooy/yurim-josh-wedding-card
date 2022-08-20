@@ -14,7 +14,7 @@ const RouteSection = () => {
 const KakaoShare = () => {
   useEffect(() => {
     if (!Kakao.isInitialized()) {
-      Kakao.init('dce43601c312444ac6482e20a9a6b250');
+      Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY);
     }
   });
 
