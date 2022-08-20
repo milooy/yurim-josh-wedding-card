@@ -42,6 +42,7 @@ const JejuVideo = () => {
       loop
       muted
       autoPlay
+      playsInline
       style={{
         width: '100vw',
         height: '100vh',

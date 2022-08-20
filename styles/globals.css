@@ -1,10 +1,13 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 html,
 body {
-  /* margin: -20px 0 0; */
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
 :root {
@@ -22,7 +25,7 @@ a {
 
 p {
   margin: 0;
-  padding: 1.2rem 0;
+  padding: 0 0 1.6rem;
 }
 
 h1,
@@ -30,6 +33,16 @@ h2,
 h3,
 h4 {
   margin: 0;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.removeMargin {
+  margin: -10px;
 }
 
 /* @media (prefers-color-scheme: dark) {

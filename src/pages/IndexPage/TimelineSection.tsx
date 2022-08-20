@@ -1,11 +1,12 @@
 import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
+import { TimelineTable } from 'src/components/Table';
 
 const TimelineSection = () => {
   return (
     <Section backgroundColor={COLORS.highlight2} title="행사 일정">
-      <table>
+      <TimelineTable>
         <tbody>
           <tr>
             <td>12:00</td>
@@ -24,7 +25,7 @@ const TimelineSection = () => {
             </td>
           </tr>
         </tbody>
-      </table>
+      </TimelineTable>
     </Section>
   );
 };
