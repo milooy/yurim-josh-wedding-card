@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from 'src/components/Footer';
 import AccountSection from './AccountSection';
+import CommentSection from './CommentSection';
 import IntroSection from './IntroSection';
 import RouteSection from './RouteSection';
 import RSVPSection from './RSVPSection';
@@ -21,6 +22,7 @@ const IndexPage = () => {
       <RSVPSection />
       <AccountSection />
       <ShareSection />
+      <CommentSection />
 
       <Footer />
     </div>
