@@ -15,7 +15,12 @@ const GallarySection = () => {
   return (
     <Section backgroundColor={COLORS.highlight3} title={`사진 구경하기`}>
       <Heading>셀프스튜디오에서도 찍고</Heading>
-      <Carousel showStatus={false} showIndicators={false} autoPlay={false}>
+      <Carousel
+        showStatus={false}
+        showIndicators={false}
+        autoPlay={false}
+        infiniteLoop
+      >
         {studioPeoplePhotos.map(src => (
           <div key={src}>
             <img src={src} alt="" />
@@ -26,7 +31,12 @@ const GallarySection = () => {
         제주도에서 금손 영진님이 사진을,
       </Heading>
 
-      <Carousel showStatus={false} showIndicators={false} autoPlay={false}>
+      <Carousel
+        showStatus={false}
+        showIndicators={false}
+        autoPlay={false}
+        infiniteLoop
+      >
         {jejuPhotos.map((src, index) => (
           <div key={src}>
             <img src={src} alt="" />
