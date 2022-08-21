@@ -2,52 +2,13 @@ import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import styled from '@emotion/styled';
-import Image, { StaticImageData } from 'next/image';
 import { JEJU_PICS, STUDIO_PICS } from 'src/assets/images';
+import { VerticalCarousel } from 'src/components/VerticalCarousel';
 
 const Heading = styled.h3`
   font-size: 1rem;
   font-weight: normal;
   margin-bottom: 14px;
-`;
-
-const VerticalCarousel = ({
-  images,
-  showSmallerImageOnMobile = false,
-  alt,
-}: {
-  images: StaticImageData[];
-  alt: string;
-  showSmallerImageOnMobile?: boolean;
-}) => {
-  return (
-    <VerticalContainer showSmallerImageOnMobile={showSmallerImageOnMobile}>
-      {images.map((pic, index) => (
-        <Image src={pic} key={index} alt={alt} draggable={false} />
-      ))}
-    </VerticalContainer>
-  );
-};
-
-const VerticalContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  > span {
-    flex: 0 0 auto;
-
-    width: 90% !important;
-    @media (min-width: 800px) {
-      width: ${({
-        showSmallerImageOnMobile,
-      }: {
-        showSmallerImageOnMobile: boolean;
-      }) => (showSmallerImageOnMobile ? '60%' : '90%')} !important;
-    }
-    scroll-snap-align: start;
-  }
 `;
 
 const GallarySection = () => {

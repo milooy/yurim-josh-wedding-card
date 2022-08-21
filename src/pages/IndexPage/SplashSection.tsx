@@ -8,8 +8,9 @@ const SplashSection = () => {
       <FlexContainer>
         <MainHeading>유림, 기효 결혼해요!</MainHeading>
         <div>
-          <p>2022년 9월 17일 토요일 낮 12시</p>
-          <p>네이버 1784사옥</p>
+          2022년 9월 17일 토요일 낮 12시
+          <br />
+          네이버 1784사옥
         </div>
         <HorizontalLine style={{ marginTop: '5vh' }} />
       </FlexContainer>
@@ -27,7 +28,7 @@ const FlexContainer = styled.div`
 `;
 
 const MainHeading = styled.h1`
-  margin-top: 10vh;
+  margin: 10vh 0 24px;
 `;
 
 const HorizontalLine = styled.div`

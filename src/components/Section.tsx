@@ -16,6 +16,7 @@ const Section = ({
       style={{
         background: backgroundColor,
         padding: `${GAP}px 16px`,
+        borderBottom: '1px solid black',
         ...style,
       }}
     >
@@ -27,6 +28,6 @@ const Section = ({
   );
 };
 
-const GAP = 28;
+const GAP = 32;
 
 export default Section;
