@@ -31,18 +31,18 @@ const AccountSection = () => {
           <div>
             <CopyInfo />
             <Acocunt
-              bankName="하나은행"
-              accountNo="742-910051-74007"
+              bankName="우리은행"
+              accountNo="1002-040-231235"
               name="장기효"
             />
             <Acocunt
-              bankName="하나은행"
-              accountNo="742-910051-74007"
+              bankName="기업은행"
+              accountNo="011-601-8247"
               name="장채환"
             />
             <Acocunt
-              bankName="하나은행"
-              accountNo="742-910051-74007"
+              bankName="기업은행"
+              accountNo="010-4081-8246"
               name="서순옥"
             />
           </div>
