@@ -1,3 +1,4 @@
+import { track } from '@amplitude/analytics-browser';
 import styled from '@emotion/styled';
 import React from 'react';
 
@@ -6,11 +7,17 @@ export const Button = ({
   onClick,
   backgroundColor = 'black',
 }: {
-  children: React.ReactNode;
+  children: string;
   onClick: () => void;
   backgroundColor?: string;
 }) => (
-  <ButtonWrapper backgroundColor={backgroundColor} onClick={onClick}>
+  <ButtonWrapper
+    backgroundColor={backgroundColor}
+    onClick={() => {
+      track(children);
+      onClick();
+    }}
+  >
     {children}
   </ButtonWrapper>
 );
