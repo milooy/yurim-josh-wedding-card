@@ -1,10 +1,17 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+// import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import styled from '@emotion/styled';
 import Image from 'next/image';
+
+import { Navigation, Pagination, Scrollbar } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/thumbs';
 
 const Heading = styled.h3`
   font-size: 1.1rem;
@@ -16,42 +23,22 @@ const GallarySection = () => {
   return (
     <Section backgroundColor={COLORS.highlight3} title={`사진 구경하기`}>
       <Heading>셀프스튜디오에서도 찍고</Heading>
-      <Carousel
-        showStatus={false}
-        showIndicators={false}
-        autoPlay={false}
-        infiniteLoop
-        // renderThumbs={() =>
-        //   studioPeoplePhotos.map(src => (
-        //     <div key={src} style={{ maxWidth: '100%', height: 'auto' }}>
-        //       <Image
-        //         src={src}
-        //         layout="fill"
-        //         objectFit="contain"
-        //         loading="lazy"
-        //       />
-        //     </div>
-        //   ))
-        // }
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar]}
+        spaceBetween={50}
+        slidesPerView={1}
       >
         {studioPeoplePhotos.map(src => (
-          <div key={src}>
-            <img src={src} alt="" />
-          </div>
-          // <Image
-          //   key={src}
-          //   src={src}
-          //   layout="responsive"
-          //   width={380}
-          //   height={380}
-          // />
+          <SwiperSlide key={src}>
+            <Image src={src} width={600} height={600} />
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
       <Heading style={{ marginTop: '4rem' }}>
         제주도에서 금손 영진님이 사진을,
       </Heading>
 
-      <Carousel
+      {/* <Carousel
         showStatus={false}
         showIndicators={false}
         autoPlay={false}
@@ -59,7 +46,6 @@ const GallarySection = () => {
         renderThumbs={() =>
           jejuPhotos.map(src => (
             <div key={src} style={{ width: '100%', height: '400px' }}>
-              {/* <img src={src} alt="" /> */}
               <Image src={src} layout="fill" objectFit="contain" />
             </div>
           ))
@@ -67,12 +53,21 @@ const GallarySection = () => {
       >
         {jejuPhotos.map(src => (
           <div key={src}>
-            {/* <img src={src} alt="" /> */}
             <Image src={src} layout="fill" objectFit="contain" />
           </div>
         ))}
-      </Carousel>
-
+      </Carousel> */}
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar]}
+        spaceBetween={50}
+        slidesPerView={1}
+      >
+        {jejuPhotos.map(src => (
+          <SwiperSlide key={src}>
+            <Image src={src} width={600} height={600} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <Heading style={{ marginTop: '4rem' }}>
         금손 대혁님이 영상을 찍어주셨어요.
       </Heading>
