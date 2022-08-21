@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 const SplashSection = () => {
   return (
-    <div style={{ height: '100vh', color: 'white' }}>
+    <div style={{ height: '100vh', color: 'white', scrollSnapAlign: 'start' }}>
       <JejuVideo />
       <FlexContainer>
         <MainHeading>유림, 기효 결혼해요!</MainHeading>

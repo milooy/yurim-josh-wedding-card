@@ -17,6 +17,7 @@ const Section = ({
         background: backgroundColor,
         padding: `${GAP}px 16px`,
         borderBottom: '1px solid black',
+        scrollSnapAlign: 'start',
         ...style,
       }}
     >
