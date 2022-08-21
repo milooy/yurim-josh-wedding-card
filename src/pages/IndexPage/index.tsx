@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from 'src/components/Footer';
+import { ScrollSnapOnlyInPC } from 'src/components/ScrollSnapOnlyInPC';
 import AccountSection from './AccountSection';
 import GallarySection from './GallarySection';
 import GwangjooRouteSection from './GwangjooRouteSection';
@@ -12,7 +13,7 @@ import TimelineSection from './TimelineSection';
 
 const IndexPage = () => {
   return (
-    <div>
+    <ScrollSnapOnlyInPC>
       {/* <NavBar /> */}
 
       <SplashSection />
@@ -28,7 +29,7 @@ const IndexPage = () => {
       <GallarySection />
 
       <Footer />
-    </div>
+    </ScrollSnapOnlyInPC>
   );
 };
 
