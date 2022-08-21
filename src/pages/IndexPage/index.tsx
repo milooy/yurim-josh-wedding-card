@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
 import React from 'react';
 import Footer from 'src/components/Footer';
+import { ScrollSnap } from 'src/components/ScrollSnap';
 import AccountSection from './AccountSection';
 import GallarySection from './GallarySection';
 import GwangjooRouteSection from './GwangjooRouteSection';
@@ -13,7 +13,7 @@ import TimelineSection from './TimelineSection';
 
 const IndexPage = () => {
   return (
-    <ScrollSnapContainer>
+    <ScrollSnap>
       {/* <NavBar /> */}
 
       <SplashSection />
@@ -29,14 +29,8 @@ const IndexPage = () => {
       <GallarySection />
 
       <Footer />
-    </ScrollSnapContainer>
+    </ScrollSnap>
   );
 };
-
-const ScrollSnapContainer = styled.div`
-  overflow-y: auto;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-`;
 
 export default IndexPage;
