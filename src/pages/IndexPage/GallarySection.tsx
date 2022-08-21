@@ -1,9 +1,31 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import styled from '@emotion/styled';
+import Image, { StaticImageData } from 'next/image';
+import studio1 from 'public/photos/1.png';
+import studio2 from 'public/photos/2.png';
+import studio3 from 'public/photos/3.png';
+import studio4 from 'public/photos/4.png';
+import studio5 from 'public/photos/5.png';
+import studio6 from 'public/photos/6.png';
+import studio7 from 'public/photos/7.png';
+import studio8 from 'public/photos/8.png';
+
+import jeju1 from 'public/photos/jeju1.jpeg';
+import jeju2 from 'public/photos/jeju2.jpeg';
+import jeju3 from 'public/photos/jeju3.jpeg';
+import jeju4 from 'public/photos/jeju4.jpeg';
+import jeju5 from 'public/photos/jeju5.jpeg';
+import jeju6 from 'public/photos/jeju6.jpeg';
+import jeju7 from 'public/photos/jeju7.jpeg';
+import jeju8 from 'public/photos/jeju8.jpeg';
+import jeju9 from 'public/photos/jeju9.jpeg';
+import jeju10 from 'public/photos/jeju10.jpeg';
+import jeju11 from 'public/photos/jeju11.jpeg';
+import jeju12 from 'public/photos/jeju12.jpeg';
+import jeju14 from 'public/photos/jeju14.jpeg';
 
 const Heading = styled.h3`
   font-size: 1.1rem;
@@ -11,11 +33,62 @@ const Heading = styled.h3`
   margin-bottom: 14px;
 `;
 
+const STUDIO_PICS = [
+  studio1,
+  studio2,
+  studio3,
+  studio4,
+  studio5,
+  studio6,
+  studio7,
+  studio8,
+];
+const JEJU_PICS = [
+  jeju1,
+  jeju2,
+  jeju3,
+  jeju4,
+  jeju5,
+  jeju6,
+  jeju7,
+  jeju8,
+  jeju9,
+  jeju10,
+  jeju11,
+  jeju12,
+  jeju14,
+];
+
+const VerticalCarousel = ({ images }: { images: StaticImageData[] }) => {
+  return (
+    <VerticalContainer>
+      {images.map((pic, index) => (
+        <Image src={pic} key={index} alt="스튜디오 사진" />
+      ))}
+    </VerticalContainer>
+  );
+};
+
+const VerticalContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  > span {
+    flex: 0 0 auto;
+    width: 90% !important;
+    scroll-snap-align: start;
+  }
+`;
+
 const GallarySection = () => {
   return (
     <Section backgroundColor={COLORS.highlight3} title={`사진 구경하기`}>
       <Heading>셀프스튜디오에서도 찍고</Heading>
-      <Carousel
+      <VerticalCarousel images={STUDIO_PICS} />
+      {/* <Carousel
         showStatus={false}
         showIndicators={false}
         showThumbs={false}
@@ -27,12 +100,14 @@ const GallarySection = () => {
             <img src={src} alt="" />
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
       <Heading style={{ marginTop: '4rem' }}>
         제주도에서 금손 영진님이 사진을,
       </Heading>
 
-      <Carousel
+      <VerticalCarousel images={JEJU_PICS} />
+
+      {/* <Carousel
         showStatus={false}
         showIndicators={false}
         showThumbs={false}
@@ -44,7 +119,7 @@ const GallarySection = () => {
             <img src={src} alt="" />
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
 
       <Heading style={{ marginTop: '4rem' }}>
         금손 대혁님이 영상을 찍어주셨어요.
