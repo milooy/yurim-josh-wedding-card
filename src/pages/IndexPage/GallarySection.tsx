@@ -18,7 +18,8 @@ const GallarySection = () => {
       <Carousel
         showStatus={false}
         showIndicators={false}
-        autoPlay={false}
+        showThumbs={false}
+        autoPlay={true}
         infiniteLoop
       >
         {studioPeoplePhotos.map(src => (
@@ -34,7 +35,8 @@ const GallarySection = () => {
       <Carousel
         showStatus={false}
         showIndicators={false}
-        autoPlay={false}
+        showThumbs={false}
+        autoPlay={true}
         infiniteLoop
       >
         {jejuPhotos.map((src, index) => (
