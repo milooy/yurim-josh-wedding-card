@@ -4,6 +4,7 @@ import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import styled from '@emotion/styled';
+import Image from 'next/image';
 
 const Heading = styled.h3`
   font-size: 1.1rem;
@@ -20,11 +21,30 @@ const GallarySection = () => {
         showIndicators={false}
         autoPlay={false}
         infiniteLoop
+        // renderThumbs={() =>
+        //   studioPeoplePhotos.map(src => (
+        //     <div key={src} style={{ maxWidth: '100%', height: 'auto' }}>
+        //       <Image
+        //         src={src}
+        //         layout="fill"
+        //         objectFit="contain"
+        //         loading="lazy"
+        //       />
+        //     </div>
+        //   ))
+        // }
       >
         {studioPeoplePhotos.map(src => (
           <div key={src}>
             <img src={src} alt="" />
           </div>
+          // <Image
+          //   key={src}
+          //   src={src}
+          //   layout="responsive"
+          //   width={380}
+          //   height={380}
+          // />
         ))}
       </Carousel>
       <Heading style={{ marginTop: '4rem' }}>
@@ -36,10 +56,19 @@ const GallarySection = () => {
         showIndicators={false}
         autoPlay={false}
         infiniteLoop
+        renderThumbs={() =>
+          jejuPhotos.map(src => (
+            <div key={src} style={{ width: '100%', height: '400px' }}>
+              {/* <img src={src} alt="" /> */}
+              <Image src={src} layout="fill" objectFit="contain" />
+            </div>
+          ))
+        }
       >
-        {jejuPhotos.map((src, index) => (
+        {jejuPhotos.map(src => (
           <div key={src}>
-            <img src={src} alt="" />
+            {/* <img src={src} alt="" /> */}
+            <Image src={src} layout="fill" objectFit="contain" />
           </div>
         ))}
       </Carousel>
