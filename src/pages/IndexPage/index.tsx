@@ -8,7 +8,6 @@ import IntroSection from './IntroSection';
 import OnlineSection from './OnlineSection';
 import RouteSection from './RouteSection';
 import RSVPSection from './RSVPSection';
-import SplashSection from './SplashSection';
 import TimelineSection from './TimelineSection';
 
 const IndexPage = () => {
@@ -16,7 +15,7 @@ const IndexPage = () => {
     <ScrollSnap>
       {/* <NavBar /> */}
 
-      <SplashSection />
+      {/* <SplashSection /> */}
       <IntroSection />
       <TimelineSection />
 
