@@ -34,6 +34,7 @@ function App({ Component, pageProps }: AppProps) {
           className="daum_roughmap_loader_script"
           src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
         ></script>
+        <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=kwl2xco4ho"></script>
       </Head>
 
       <main>
