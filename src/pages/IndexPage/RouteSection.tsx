@@ -7,7 +7,7 @@ const RouteSection = () => {
     <Section backgroundColor={COLORS.highlight1} title="본식 오시는 길">
       <div style={{ marginBottom: 22 }}>
         <span style={{ fontSize: '1.2rem' }}>
-          네이버 1784사옥 28층 스카이홀
+          네이버 1784 신사옥 28층 스카이홀
         </span>
         <br />
         <span style={{ fontSize: '0.9rem' }}>

@@ -10,7 +10,7 @@ const SplashSection = () => {
         <div>
           2022년 9월 17일 토요일 낮 12시
           <br />
-          네이버 1784사옥
+          네이버 1784 신사옥
         </div>
         <HorizontalLine style={{ marginTop: '5vh' }} />
       </FlexContainer>
