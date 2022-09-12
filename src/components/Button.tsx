@@ -6,10 +6,12 @@ export const Button = ({
   children,
   onClick,
   backgroundColor = 'black',
+  style,
 }: {
   children: string;
   onClick: () => void;
   backgroundColor?: string;
+  style?: React.CSSProperties;
 }) => (
   <ButtonWrapper
     backgroundColor={backgroundColor}
@@ -17,6 +19,7 @@ export const Button = ({
       track(children);
       onClick();
     }}
+    style={style}
   >
     {children}
   </ButtonWrapper>
@@ -33,3 +36,36 @@ const ButtonWrapper = styled.button`
   border-radius: 6px;
   font-size: 1rem;
 `;
+
+export const YoutubeButton = ({ style }: { style?: React.CSSProperties }) => {
+  return (
+    <Button
+      backgroundColor="#ef0014"
+      onClick={() =>
+        window.open('https://www.youtube.com/channel/UCX04UECIFaAjNnsak6GzpZg')
+      }
+      style={style}
+    >
+      캡틴판교 유튜브
+    </Button>
+  );
+};
+
+export const RSVPButton = ({ style }: { style?: React.CSSProperties }) => {
+  return (
+    <>
+      <Button
+        backgroundColor="#8554ff"
+        onClick={() => {
+          window.open('https://forms.gle/wDUHn6snzFeaNha49');
+        }}
+        style={style}
+      >
+        참가 여부 알려주기
+      </Button>
+      <div style={{ fontSize: '0.9rem', marginTop: 10, paddingBottom: 0 }}>
+        * 수정이 필요하다면 한번 더 작성해주시면 됩니다
+      </div>
+    </>
+  );
+};

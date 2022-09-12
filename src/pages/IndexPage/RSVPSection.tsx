@@ -1,6 +1,6 @@
 import React from 'react';
 import { COLORS } from 'src/assets/theme';
-import { Button } from 'src/components/Button';
+import { RSVPButton } from 'src/components/Button';
 import Section from 'src/components/Section';
 
 const RSVPSection = () => {
@@ -14,18 +14,7 @@ const RSVPSection = () => {
         알려주세요. 예식 준비에 많은 도움이 됩니다 😄
       </p>
 
-      <Button
-        backgroundColor="#8554ff"
-        onClick={() => {
-          window.open('https://forms.gle/wDUHn6snzFeaNha49');
-        }}
-      >
-        참가 여부 알려주기
-      </Button>
-
-      <p style={{ fontSize: '0.9rem', marginTop: 10, paddingBottom: 0 }}>
-        * 참가 인원이 바뀌게 된다면 따로 편하게 알려주세요.
-      </p>
+      <RSVPButton />
     </Section>
   );
 };

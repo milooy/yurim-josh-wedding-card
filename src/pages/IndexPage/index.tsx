@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import Footer from 'src/components/Footer';
-import { ScrollSnapOnlyInPC } from 'src/components/ScrollSnapOnlyInPC';
 import AccountSection from './AccountSection';
 import GallarySection from './GallarySection';
-import GwangjooRouteSection from './GwangjooRouteSection';
 import IntroSection from './IntroSection';
 import OnlineSection from './OnlineSection';
 import RouteSection from './RouteSection';
-import RSVPSection from './RSVPSection';
 import SplashSection from './SplashSection';
 import TimelineSection from './TimelineSection';
+import NoticeSection from './NoticeSection';
 import * as amplitude from '@amplitude/analytics-browser';
 
 const IndexPage = () => {
@@ -22,23 +20,24 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <ScrollSnapOnlyInPC>
+    <>
       {/* <NavBar /> */}
 
       <SplashSection />
       <IntroSection />
+      <NoticeSection />
       <TimelineSection />
 
       <RouteSection />
-      <GwangjooRouteSection />
+      {/* <GwangjooRouteSection /> */}
       <OnlineSection />
-      <RSVPSection />
+      {/* <RSVPSection /> */}
       <AccountSection />
       {/* <ShareSection /> */}
       <GallarySection />
 
       <Footer />
-    </ScrollSnapOnlyInPC>
+    </>
   );
 };
 

@@ -37,4 +37,9 @@ export const TimelineTable = styled.table`
   tr:last-of-type td {
     padding: 0;
   }
+  ul {
+    font-size: 0.8em;
+    list-style: lower-roman;
+    margin: 0 0.9rem;
+  }
 `;
