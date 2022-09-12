@@ -41,9 +41,7 @@ export const YoutubeButton = ({ style }: { style?: React.CSSProperties }) => {
   return (
     <Button
       backgroundColor="#ef0014"
-      onClick={() =>
-        window.open('https://www.youtube.com/channel/UCX04UECIFaAjNnsak6GzpZg')
-      }
+      onClick={() => window.open('https://youtu.be/S_C7kz008YE')}
       style={style}
     >
       캡틴판교 유튜브
