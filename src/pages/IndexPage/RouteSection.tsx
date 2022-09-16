@@ -14,9 +14,36 @@ const RouteSection = () => {
           경기 성남시 분당구 정자일로 95
         </span>
       </div>
-      <KakaoMap />
+      <NaverMap />
+      {/* <KakaoMap /> */}
     </Section>
   );
+};
+
+declare const naver: any;
+
+const NaverMap = () => {
+  useEffect(() => {
+    const mapOptions = {
+      center: new naver.maps.LatLng(37.3595704, 127.105399),
+      zoom: 14,
+      zoomControl: true,
+      zoomControlOptions: {
+        //줌 컨트롤의 옵션
+        position: naver.maps.Position.TOP_RIGHT,
+      },
+    };
+    const map = new naver.maps.Map('_naver_map', mapOptions);
+    const marker = new naver.maps.Marker({
+      position: map.getCenter(),
+      map: map,
+    });
+    new naver.maps.InfoWindow({
+      content: '<div style="font-size: 0.9rem">네이버 1784</div>',
+    }).open(map, marker);
+  }, []);
+
+  return <div id="_naver_map" style={{ width: '100%', height: '250px' }}></div>;
 };
 
 const KakaoMap = () => {
